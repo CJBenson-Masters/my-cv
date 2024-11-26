@@ -1,0 +1,138 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.resume__heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.profile-image {
+    width: 200px; 
+    height: 250px; 
+    border-radius: 100%; 
+    object-fit: cover;
+    border: 3px solid #000; 
+    margin: 20px auto; 
+    display: block;
+    padding: 5px;
+}
+
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill Section */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #000;
+    width: 0; /* Will animate to data-level */
+    border-radius: 5px;
+}
+
+
+.resume__left,
+.resume__right {
+    padding: 20px;
+}
+
+h3 {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+}
+
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Move to bottom-left */
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.scroll-top:hover {
+    background-color: #333;
+}
+
+.download-pdf {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Stay at bottom-right */
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.download-pdf:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .resume {
+        flex-direction: row;
+    }
+}
