@@ -1,4 +1,3 @@
-// Scroll to Top Button
 const scrollTop = document.createElement('button');
 scrollTop.textContent = "↑ Top";
 scrollTop.classList.add('scroll-top');
@@ -21,7 +20,7 @@ scrollTop.addEventListener('click', () => {
 
 // PDF Generation Button
 const downloadButton = document.createElement('button');
-downloadButton.textContent = "Download PDF";
+downloadButton.textContent = "Download";
 downloadButton.classList.add('download-pdf');
 document.body.appendChild(downloadButton);
 
@@ -37,33 +36,51 @@ const generatePdf = () => {
     html2pdf().set(options).from(areaCv).save();
 };
 
-downloadButton.addEventListener("click", generatePdf);
+// Modal for language selection
+const modal = document.getElementById('language-modal');
+const downloadBtn = document.getElementById('download-button');
+const closeModalButton = document.getElementById('close-modal');
+const englishButton = document.getElementById('english-button');
+const frenchButton = document.getElementById('french-button');
+const resumename = document.getElementById('resume-name');
+const myname = document.getElementById('myname');
+const loader = document.getElementById('loader');
 
-// Cool Features
-// Add typing animation to the resume's heading
-const heading = document.querySelector('.resume__heading');
-const text = heading ? heading.textContent : '';
-if (heading) {
-    heading.textContent = ''; // Clear the text to prepare for the typing effect
-    let index = 0;
-    const typeEffect = () => {
-        if (index < text.length) {
-            heading.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeEffect, 100); // Adjust typing speed here
-        }
-    };
-    typeEffect();
+// Show modal when download button is clicked
+downloadButton.addEventListener('click', function () {
+    modal.style.display = 'flex'; // Show the modal 
+    resumename.style.display = 'none';
+    myname.style.display = 'flex'; 
+});
+
+// Close modal when close button is clicked
+closeModalButton.addEventListener('click', function () {
+    modal.style.display = 'none'; // Hide the modal
+    resumename.style.display = 'none';
+    myname.style.display = 'flex'; 
+});
+
+// Download PDF after language selection
+function delayedDownload(language) {
+    // Show loader
+    loader.style.display = 'block';
+    // Translate content to selected language
+    translateContent(language);
+
+    // Wait for 5 seconds before downloading the PDF
+    setTimeout(() => {
+        generatePdf();
+        // Hide loader after download
+        loader.style.display = 'none';
+    }, 4000); // Delay to allow translation
 }
 
+englishButton.addEventListener('click', function () {
+    delayedDownload('en');
+    modal.style.display = 'none'; // Close the modal after selecting language
+});
 
-// Add interactive progress bars for skills
-const skills = document.querySelectorAll('.skill-bar');
-skills.forEach((skill) => {
-    const level = skill.getAttribute('data-level'); // Example: 80%
-    skill.style.width = 0;
-    setTimeout(() => {
-        skill.style.transition = 'width 2s ease';
-        skill.style.width = level;
-    }, 500); // Delay to start animation
+frenchButton.addEventListener('click', function () {
+    delayedDownload('fr');
+    modal.style.display = 'none'; // Close the modal after selecting language
 });

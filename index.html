@@ -9,59 +9,63 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Responsive Resume CV</title>
 </head>
-<body>
+<body id="area-cv">
   <header class="l-header" id="header">
     <div class="header__content">
-        <h1 class="resume__heading">Ohamadike Emmanuel Chidera</h1> 
+        <h1 id="resume-name" class="resume__heading" style="display: block;">Ohamadike Emmanuel Chidera</h1>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <h1 id="myname" class="resume__name" style="display: none;">Ohamadike Emmanuel Chidera</h1>
+        </div>
         <p>Graduate in Computer Science | Aspiring IT Professional</p>
     </div>
-</header>
+  </header>
 
 
     <main class="l-main bd-container">
-        <div class="resume" id="area-cv">
+        <div class="resume">
             <!-- Left Section -->
             <div class="resume__left">
                 <!-- Home Section -->
                 <section class="profile section" id="profile">
                   <img src="assets/img/img1.jpg" alt="Profile Image" class="profile-image">
-                  <p><h2>Career Objective</h2>As a recent graduate in Computer Science, I have developed a strong foundation in IT infrastructure, incident management, and data science. With expertise in programming languages such as Python, Java, and C++, and experience in data analysis and software development, I am well-equipped to contribute to innovative projects across various industries. 
+                  <h2 class="translatable" data-key="career-objective-title">Career Objective</h2>
+                  <p class="translatable" data-key="career-objective-content">As a recent graduate in Computer Science, I have developed a strong foundation in IT infrastructure, incident management, and data science. With expertise in programming languages such as Python, Java, and C++, and experience in data analysis and software development, I am well-equipped to contribute to innovative projects across various industries. 
                     <br>My experience as a Teaching Assistant has strengthened my communication, problem-solving, and leadership skills, particularly in collaborative team environments. Through academic and practical work in areas like web-based applications and sentiment analysis, I am driven to apply my technical and analytical abilities to deliver impactful solutions. 
                     <br>I am eager to contribute to organizations committed to fostering innovation and driving meaningful progress in their respective fields.</p>
                 </section>              
 
                 <!-- Social Section -->
                 <section class="social section">
-                    <h3>Contact Information</h3>
+                    <h3 class="translatable" data-key="contact-title">Contact Information</h3>
                     <ul>
-                        <li><i class="bx bx-envelope"></i> Email: ohamadikee98@gmail.com</li>
-                        <li><i class="bx bx-phone"></i> Phone: +2550701261040/+233554589852</li>
+                        <li class="translatable" data-key="email"><i class="bx bx-envelope"></i> Email: ohamadikee98@gmail.com</li>
+                        <li class="translatable" data-key="phone"><i class="bx bx-phone"></i> Phone: +2550701261040/+233554589852</li>
                         <li><i class="bx bx-link"></i> GitHub: <a href="https://github.com/EmmaSantos11">EmmaSantos11</a></li>
                     </ul>
                 </section>
 
                 <!-- Profile Section -->
                 <section class="profile section" id="profile">
-                    <h3>Profile</h3>
-                    <p>Recent graduate in Computer Science with experience in teaching, teamwork, and innovative project development. Skilled in programming and analytical problem-solving.</p>
+                    <h3 class="translatable" data-key="profile-title">Profile</h3>
+                    <p class="translatable" data-key="profile-content">Recent graduate in Computer Science with experience in teaching, teamwork, and innovative project development. Skilled in programming and analytical problem-solving.</p>
                 </section>
 
                 <!-- Education Section -->
                 <section class="education section" id="education">
-                    <h3>Education</h3>
+                    <h3 class="translatable" data-key="education-title">Education</h3>
                     <ul>
-                        <li><b>Catholic University of Ghana, Fiapre, Sunyani</b>  
-                            <p>BSc Computer Science (Second Class), October 2024</p>
+                        <li><b class="translatable" data-key="school">Catholic University of Ghana, Fiapre, Sunyani</b>  
+                            <p class="translatable" data-key="degree">BSc Computer Science (Second Class), October 2024</p>
                         </li>
-                        <li>Certification: Cisco – Introduction to Data Science</li>
-                        <li>Relevant Coursework: IT Service Management, Data Structures, Systems Analysis, Database Design</li>
+                        <li class="translatable" data-key="certificates">Certification: Cisco – Introduction to Data Science</li>
+                        <li class="translatable" data-key="xp-work">Relevant Coursework: IT Service Management, Data Structures, Systems Analysis, Database Design</li>
                     </ul>
                 </section>
 
                 <!-- Skills Section -->
-                <section class="skills section" id="skills">
-                  <h1>Technical Skills</h1>  
-                  <h3>Programming skills:</h3>
+            <section class="skills section" id="skills">
+                  <h1 class="translatable" data-key="skills-title">Technical Skills</h1>  
+                  <h3 class="translatable" data-key="skills-sub-title">Programming skills:</h3>
                   <div class="skill">
                       <span>JavaScript</span>
                       <div class="skill-bar" data-level="60%"></div>
@@ -77,92 +81,108 @@
                 <div class="skill">
                   <span>C++</span>
                   <div class="skill-bar" data-level="70%"></div>
-              </div>
-              <div class="skill">
-                <span>C#</span>
-                <div class="skill-bar" data-level="70%"></div>
-            </div>
-            <div class="skill">
-              <span>Unix</span>
-              <div class="skill-bar" data-level="60%"></div>
-          </div>
-          <h3>Web Development Skill:</h3>
-          <div class="skill">
-            <span>HTML & CSS</span>
-            <div class="skill-bar" data-level="90%"></div>
-        </div>
-        <h3>Database Skill:</h3>
-        <div class="skill">
-          <span>MySQL</span>
-          <div class="skill-bar" data-level="70%"></div>
-      </div>
-      <h3>Data Tools Skill:</h3>
-      <div class="skill">
-        <span>Excel</span>
-        <div class="skill-bar" data-level="90%"></div>
-    </div>
-              </section>
+                </div>
+                <div class="skill">
+                    <span>C#</span>
+                    <div class="skill-bar" data-level="70%"></div>
+                </div>
+                <div class="skill">
+                    <span>Unix</span>
+                    <div class="skill-bar" data-level="60%"></div>
+                </div>
+                <h3>Web Development Skill:</h3>
+                <div class="skill">
+                    <span>HTML & CSS</span>
+                    <div class="skill-bar" data-level="90%"></div>
+                </div>
+                <h3>Database Skill:</h3>
+                <div class="skill">
+                    <span>MySQL</span>
+                    <div class="skill-bar" data-level="70%"></div>
+                </div>
+                <h3>Data Tools Skill:</h3>
+                <div class="skill">
+                    <span>Excel</span>
+                    <div class="skill-bar" data-level="90%"></div>
+                </div>
+            </section>
 
             <!-- Right Section -->
             <div class="resume__right">
                 <!-- Experience Section -->
                 <section class="experience section" id="experience">
-                    <h3>Work Experience</h3>
-                    <p><b>Teaching Assistant</b></p>
+                    <h3 class="translatable" data-key="workxp-title">Work Experience</h3>
+                    <p><b class="translatable" data-key="workxp-subtitle">Teaching Assistant</b></p>
                     <ul>
-                      <p>Catholic University of Ghana, Fiapre, Sunyani
+                      <p class="translatable" data-key="work-school">Catholic University of Ghana, Fiapre, Sunyani
                         [300-Level Second Semester – 400-Level Second Semester]</p>
-                        <li>Supported course delivery and mentoring at Catholic University of Ghana.</li>
-                        <li>Assisted in research and project development, including coordinating schedules and managing documentation.</li>
-                        <li>Strengthened collaborative skills by working closely with the supervising professor and student teams.</li>
+                        <li class="translatable" data-key="work-dutie-one">Supported course delivery and mentoring at Catholic University of Ghana.</li>
+                        <li class="translatable" data-key="work-dutie-two">Assisted in research and project development, including coordinating schedules and managing documentation.</li>
+                        <li class="translatable" data-key="work-dutie-three">Strengthened collaborative skills by working closely with the supervising professor and student teams.</li>
                     </ul>
                 </section>
 
                 <!-- Certificates Section -->
                 <section class="certificate section" id="certificates">
                     <h3>Certifications</h3>
-                    <ul>Cisco - Introduction to Data Science (December 2023)
-                      <li>Skills: Data Analysis, Data Collection, Data Validation</li>
+                    <ul class="translatable" data-key="cert-one">Cisco - Introduction to Data Science (December 2023)
+                      <li class="translatable" data-key="cert-two">Skills: Data Analysis, Data Collection, Data Validation</li>
                     </ul>
                     
                 </section>
 
                 <!-- Projects Section -->
                 <section class="references section" id="references">
-                    <h3>Projects</h3>
+                    <h3 class="translatable" data-key="project-title">Projects</h3>
                     <ul>
-                      <h4>Sentiment Analysis-Based Election Prediction System</h4>
-                      <li>Developed a predictive model leveraging sentiment analysis of social media comments to forecast election outcomes.</li>
+                      <h4 class="translatable" data-key="project-subtitle">Sentiment Analysis-Based Election Prediction System</h4>
+                      <li class="translatable" data-key="project-one">Developed a predictive model leveraging sentiment analysis of social media comments to forecast election outcomes.</li>
                       <li>Technologies: Python, MySQL</li>
                         <li>Published on GitHub:<a href="https://sentiment-election-predict.streamlit.app/" target="_blank">
                             Sentiment Analysis-Based Election Prediction System</a></li>
-                        <li>Team-Based App Development (Work-in-Progress)</li>
+                        <li class="translatable" data-key="project-three">Team-Based App Development (Work-in-Progress)</li>
                     </ul>
                 </section>
 
                 <!-- Soft Skills Section -->
                 <section class="skills section" id="skills">
-                  <h3>Soft Skills</h3>
+                  <h3 class="translatable" data-key="soft-skills-title">Soft Skills</h3>
                   <ul>
-                      <li>Analytical problem-solving</li>
-                      <li>Strong verbal and written communication</li>
-                      <li>Collaboration and teamwork</li>
-                      <li>Adaptability in remote and multicultural environments</li>
+                      <li class="translatable" data-key="soft-skills-one">Analytical problem-solving</li>
+                      <li class="translatable" data-key="soft-skills-two">Strong verbal and written communication</li>
+                      <li class="translatable" data-key="soft-skills-three">Collaboration and teamwork</li>
+                      <li class="translatable" data-key="soft-skills-four">Adaptability in remote and multicultural environments</li>
                   </ul>
-              </section>
+                </section>
 
-              <!-- Hobbies/Interests Section -->
-              <section class="skills section" id="skills">
-                <h3>Hobbies/Interests</h3>
-                <ul>
-                    <li>Exploring advancements in IT infrastructure and monitoring tools</li>
-                    <li>Volunteering in tech education</li>
-                    <li>Learning new programming languages</li>
-                </ul>
-            </section>
+                <!-- Hobbies/Interests Section -->
+                <section class="skills section" id="skills">
+                    <h3 class="translatable" data-key="hobbies-title">Hobbies/Interests</h3>
+                    <ul>
+                        <li class="translatable" data-key="hobbies-one">Exploring advancements in IT infrastructure and monitoring tools</li>
+                        <li class="translatable" data-key="hobbies-two">Volunteering in tech education</li>
+                        <li class="translatable" data-key="hobbies-three">Learning new programming languages</li>
+                    </ul>
+                </section>
             </div>
         </div>
     </main>
+
+    <!-- Modal for Language Selection -->
+    <div id="language-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Select Language</h2>
+            <button id="english-button">English</button>
+            <button id="french-button">French</button>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <!-- Loader Section -->
+    <div id="loader" class="loader-container" style="display: none;">
+        <div class="spinner"></div>
+        <p>Please wait, PDF is being generated...</p>
+    </div>
 
     <!-- Scroll Top -->
     <a href="#header" class="scroll-top">
@@ -170,10 +190,12 @@
     </a>
     <button class="scroll-top" style="display: none;">↑</button>
 
-    <!-- HTML2PDF Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <!-- Translation JS -->
+    <script src="assets/js/translation.js"></script>
     <!-- Main JS -->
     <script src="assets/js/index.js"></script>
+
+    <!-- HTML2PDF Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
